@@ -6,8 +6,8 @@ import router from './router'
 import store from './store'
 import ajax from './ajax/index'
 import sessionStorage from './utils/sessionStorage'
+import setpop from './utils/setpop'
 Vue.config.productionTip = false
-
 import { ToastPlugin } from 'vux'
 
 Vue.use(ToastPlugin)
@@ -15,6 +15,7 @@ import './assets/rem'
 //将axios挂载到Vue实例中的$ajax上面,在项目中的任何位置通过this.$ajax使用
 Vue.prototype.$ajax = ajax
 Vue.prototype.$ss = sessionStorage
+Vue.prototype.$sp = setpop
 /* eslint-disable no-new */
 const V = new Vue({
   el: '#app',
